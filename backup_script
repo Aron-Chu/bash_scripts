@@ -5,8 +5,8 @@
 # Last Modified 31/7/2021
 
 # Description:
-# Creates a backup in the users current directory of all files in the
-home dir>
+# Creates a backup in the users current directory of all files in
+# the home directory
 
 # Usage
 # backup_script
@@ -16,8 +16,7 @@ echo "I will now back up your home directory, $HOME"
 currentdir=$(pwd)
 echo "You are running in the script from $currentdir"
 echo "Therefore, I will save the backup in $currentdir"
-tar -cf $currentdir/my_backup_"$(date +%d-%m-%Y_%H-%M-%S)".tar ~/*
-2>/dev/null
+tar -cf $currentdir/my_backup_"$(date +%d-%m-%Y_%H-%M-%S)".tar ~/* 2>/dev/null
 echo "Backup Completed Successfully"
 exit 0
 
